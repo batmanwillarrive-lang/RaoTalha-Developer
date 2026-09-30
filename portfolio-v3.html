@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rao Talha Imam | WordPress, Shopify & Frontend Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@500&family=Montserrat:wght@500;700;800&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#050e0c;--t1:#0f3a33;--t2:#1c5a51;--gold:#cdb783;--cream:#efe8d6;--mute:#9db2ab;--line:rgba(205,183,131,.2)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font:300 15px/1.7 Poppins,sans-serif;color:var(--cream);background:var(--ink);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(60% 50% at 20% 0,var(--t2),transparent 70%),radial-gradient(50% 40% at 100% 100%,var(--t1),transparent 70%),var(--ink)}
+#spot{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(420px circle at var(--x,50%) var(--y,30%),rgba(205,183,131,.12),transparent 70%)}
+.cur{position:fixed;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border:1px solid var(--gold);border-radius:50%;pointer-events:none;z-index:99;transition:width .25s,height .25s,margin .25s,background .25s}
+.cur.big{width:70px;height:70px;margin:-35px 0 0 -35px;background:rgba(205,183,131,.12)}
+a{color:inherit;text-decoration:none}:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+h1,h2,h3{font-family:Montserrat,sans-serif;font-weight:800;line-height:1.1}
+svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+#prog{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0;transform:scaleX(0);background:linear-gradient(90deg,#8a6418,var(--gold));z-index:60}
+.top{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:16px 4vw;font:500 12px Montserrat;letter-spacing:.06em;text-transform:uppercase;background:linear-gradient(180deg,rgba(5,14,12,.9),transparent)}
+.top b{color:var(--gold);display:block;font-weight:700}.top nav{display:flex;gap:26px;align-items:center}.top nav a{opacity:.75;transition:.3s}.top nav a:hover{opacity:1;color:var(--gold)}
+.top .av{color:var(--gold);opacity:1}
+section{padding:110px 4vw 40px;position:relative}
+.rule{display:flex;align-items:center;gap:24px;margin-bottom:34px}.rule h2{font-size:clamp(20px,2.4vw,28px);letter-spacing:.02em;text-transform:uppercase;white-space:nowrap}.rule i{flex:1;height:1px;background:var(--line)}.rule span{font:500 12px Montserrat;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+
+/* hero */
+.hero{min-height:100vh;padding-top:90px;overflow:hidden;display:grid;grid-template-columns:1fr 240px;align-items:end;gap:20px}
+.big{position:absolute;left:2vw;right:2vw;top:70px;font:400 clamp(90px,24.5vw,430px)/.95 Anton,sans-serif;text-align:center;text-transform:uppercase;background:linear-gradient(180deg,var(--gold) 5%,rgba(205,183,131,.08) 85%);-webkit-background-clip:text;background-clip:text;color:transparent;pointer-events:none;user-select:none}
+.ph{position:absolute;left:50%;bottom:0;height:88%;transform:translateX(-50%);-webkit-mask:linear-gradient(#000 70%,transparent);mask:linear-gradient(#000 70%,transparent);pointer-events:none}
+.me{position:relative;z-index:2;padding-bottom:60px}
+.hi{font:500 clamp(24px,3vw,38px) 'Dancing Script',cursive;color:var(--gold);margin-bottom:6px}
+.name{font:400 clamp(52px,8.5vw,128px)/.95 Anton,sans-serif;text-transform:uppercase;margin-bottom:18px}.name div{display:block}
+.name span{display:inline-block;transition:transform .15s,color .15s;color:var(--cream)}
+.role{font:700 clamp(14px,1.5vw,18px) Montserrat;color:var(--gold);text-transform:uppercase;letter-spacing:.06em}.role em{font-style:normal;color:var(--cream)}
+.role u{display:inline-block;width:2px;height:1em;background:var(--gold);margin-left:3px;vertical-align:-.12em;animation:bl 1s steps(1) infinite;text-decoration:none}@keyframes bl{50%{opacity:0}}
+.me p{max-width:44ch;color:var(--mute);margin:14px 0 22px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border:1.5px solid var(--gold);border-radius:8px;font:700 12px Montserrat;letter-spacing:.08em;text-transform:uppercase;transition:.3s;margin:0 10px 10px 0}.btn:hover{background:var(--gold);color:var(--ink);transform:translateY(-3px)}
+.st{position:relative;z-index:2;padding-bottom:60px}.st div{padding:16px 0;border-bottom:1px solid var(--line)}.st div:last-child{border:0}
+.st b{font:400 clamp(34px,3.6vw,50px) Anton;color:var(--gold);margin-right:14px}.st span{font:500 11px Montserrat;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.tag{display:flex;gap:12px;align-items:center;margin-bottom:26px;font-size:13px;color:var(--mute);max-width:200px}.tag i{flex:0 0 38px;height:38px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-style:normal}
+
+/* projects */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pc{position:relative;transition:transform .2s;display:block}
+.shot{position:relative;height:210px;border-radius:12px;overflow:hidden;border:1px solid var(--line);padding:12px;box-shadow:0 24px 44px rgba(0,0,0,.45)}
+.shot::after{content:"";position:absolute;inset:0;background:radial-gradient(300px circle at var(--mx,50%) var(--my,0),rgba(255,255,255,.22),transparent 60%)}
+.shot .d{display:flex;gap:5px}.shot .d i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.4)}
+.shot h4{position:absolute;left:16px;bottom:14px;font:400 36px Anton;text-transform:uppercase;color:#fff;line-height:1}
+.shot .l{margin-top:14px;display:grid;gap:7px}.shot .l i{height:6px;border-radius:6px;background:rgba(255,255,255,.35)}
+.meta{display:flex;align-items:center;gap:14px;margin-top:14px}.meta b{font:400 34px Anton;color:var(--gold);opacity:.8}.meta div{flex:1;font:500 12px Montserrat;letter-spacing:.06em;text-transform:uppercase}.meta small{display:block;color:var(--mute);font-weight:400;text-transform:none;letter-spacing:0;font-size:12.5px}.meta a{color:var(--gold)}
+.pc p{margin-top:6px;font-size:13px;color:var(--mute)}
+
+/* 3-col band */
+.band{display:grid;grid-template-columns:1fr 1.15fr .8fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(5,14,12,.55)}
+.band>div{padding:34px 30px}.band>div+div{border-left:1px solid var(--line)}
+.band h3{font-size:20px;text-transform:uppercase;margin-bottom:22px}
+.sub{font:700 11px Montserrat;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:20px 0 10px}
+.ed{display:flex;justify-content:space-between;gap:10px;font-size:13.5px}.ed small{display:block;color:var(--mute)}.ed em{font-style:normal;color:var(--gold);font-size:12px;white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chips span{display:inline-flex;align-items:center;gap:7px;padding:7px 13px 7px 9px;border:1px solid var(--line);border-radius:8px;font:500 11px Montserrat;letter-spacing:.05em;text-transform:uppercase;background:rgba(205,183,131,.04);transition:border-color .3s ease,transform .3s ease,background .3s ease}
+.chips span:hover{border-color:var(--gold);transform:translateY(-2px);background:rgba(205,183,131,.1)}
+.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:10px;margin-bottom:20px}
+.tool{display:flex;flex-direction:column;align-items:center;gap:7px;padding:13px 4px;border:1px solid var(--line);border-radius:10px;background:rgba(205,183,131,.04);transition:border-color .3s ease,transform .3s ease,background .3s ease}
+.tool:hover{border-color:var(--gold);transform:translateY(-3px);background:rgba(205,183,131,.1)}
+.tool i{width:26px;height:26px;display:grid;place-items:center}.tool i svg{width:100%;height:100%}
+.tool span{font:500 9px Montserrat;letter-spacing:.03em;text-transform:uppercase;color:var(--mute);text-align:center;line-height:1.25}
+.badge{position:absolute;right:12px;top:12px;width:28px;height:28px;border-radius:8px;background:rgba(5,14,12,.6);border:1px solid rgba(255,255,255,.22);display:grid;place-items:center;z-index:2}
+.badge svg{width:16px;height:16px}
+.chips span svg{width:15px;height:15px;flex:0 0 15px;color:var(--gold)}
+
+/* toolbelt strip in hero */
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 26px}
+.tools i{display:grid;place-items:center;width:38px;height:38px;border:1px solid var(--line);border-radius:10px;color:var(--gold);background:rgba(205,183,131,.04);transition:.3s}
+.tools i:hover{border-color:var(--gold);transform:translateY(-3px);background:rgba(205,183,131,.1)}
+.tools i svg{width:19px;height:19px}
+
+/* project tool tags with icons */
+.ttags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.ttags span{display:inline-flex;align-items:center;gap:5px;padding:4px 9px;border:1px solid var(--line);border-radius:6px;font:500 10px Montserrat;letter-spacing:.04em;text-transform:uppercase;color:var(--mute)}
+.ttags span svg{width:12px;height:12px;color:var(--gold)}
+.gl{font:500 11px Poppins;color:var(--mute);margin:12px 0 6px}
+.pr{position:relative}.pr::before{content:"";position:absolute;left:19px;top:20px;bottom:40px;width:1px;background:var(--gold);opacity:.4}
+.step{display:flex;gap:16px;margin-bottom:20px;position:relative}.step>i{flex:0 0 40px;height:40px;border:1px solid var(--gold);border-radius:50%;background:var(--ink);display:grid;place-items:center;color:var(--gold)}
+.step b{font:700 12px Montserrat;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}.step p{font-size:13px;color:var(--mute);line-height:1.55}
+.q{background:linear-gradient(160deg,var(--t2),var(--t1));display:flex;flex-direction:column;justify-content:space-between}
+.q .m{font:400 60px/1 Anton;color:var(--gold)}.q p{font:500 20px/1.4 Montserrat;margin:10px 0}.q .sg{font:500 34px 'Dancing Script',cursive;color:var(--gold)}.q small{color:var(--mute);text-transform:uppercase;letter-spacing:.08em;font-size:11px}
+
+/* timeline */
+.tl{position:relative;max-width:900px;padding-left:38px}
+.tl::before,.tl::after{content:"";position:absolute;left:8px;top:6px;bottom:0;width:2px;background:var(--line)}
+.tl::after{background:var(--gold);transform-origin:top;transform:scaleY(var(--p,0))}
+.job{position:relative;margin-bottom:44px}.job::before{content:"";position:absolute;left:-38px;top:6px;width:18px;height:18px;border-radius:50%;background:var(--ink);border:2px solid var(--gold);box-shadow:0 0 0 5px rgba(205,183,131,.12)}
+.job small{color:var(--gold);font:700 12px Montserrat;letter-spacing:.08em;text-transform:uppercase}.job h3{font-size:clamp(20px,2.6vw,28px);margin:6px 0 4px}.job em{font-style:normal;color:var(--mute)}
+.job ul{margin:12px 0 0 18px;color:var(--mute)}.job li{margin-bottom:7px}.job li::marker{color:var(--gold)}
+
+/* contact */
+.ct{display:grid;grid-template-columns:1fr 1.2fr;gap:5vw;align-items:center}
+.ct h2{font:400 clamp(44px,7vw,100px)/1 Anton;text-transform:uppercase;margin-bottom:16px}.ct p{color:var(--mute);max-width:40ch;margin-bottom:22px}
+.row{display:flex;align-items:center;gap:18px;padding:16px 0;border-bottom:1px solid var(--line);font-size:16px;transition:.3s}.row:hover{color:var(--gold);padding-left:8px}
+.row i{flex:0 0 42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold)}
+footer{padding:22px 4vw;color:var(--mute);font-size:12px;text-align:center;border-top:1px solid var(--line)}
+@media(max-width:900px){.tools{grid-template-columns:repeat(auto-fill,minmax(70px,1fr))}.hero{grid-template-columns:1fr}.st{display:flex;gap:26px;flex-wrap:wrap;padding-bottom:40px}.st div{border:0;padding:0}.grid,.ct{grid-template-columns:1fr}.band{grid-template-columns:1fr}.band>div+div{border-left:0;border-top:1px solid var(--line)}.top nav a:not(.av){display:none}.cur{display:none}.tag{display:none}.big{top:80px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body>
+<div id="prog"></div><div id="spot"></div><div class="cur" id="cur"></div>
+<header class="top"><div><b>Web Developer</b>Shopify &amp; WordPress</div><nav><a href="#work">Work</a><a href="#exp">Experience</a><a href="#about">Skills</a><a href="#contact">Contact</a><a href="#contact" class="av">Available for freelance ✦</a></nav></header>
+
+<section class="hero" id="home">
+  <div class="big" aria-hidden="true">Portfolio</div>
+  <div class="me">
+    <div class="hi">Hello, I'm</div>
+    <h1 class="name" id="name" aria-label="Rao Talha Imam"></h1>
+    <div class="role">Web developer &amp; <em id="typed"></em><u></u></div>
+    <p>I build fast, responsive, conversion-focused WordPress and Shopify websites for international clients, from Figma design to launch.</p>
+    <a class="btn" href="#work">See my work</a><a class="btn" href="#contact">Let's talk</a>
+  </div>
+  <div class="st">
+    <div class="tag"><i>✦</i>Turning ideas into powerful digital experiences.</div>
+    <div><b data-n="4" data-s="+">0</b><span>Years experience</span></div>
+    <div><b data-n="20" data-s="+">0</b><span>Websites delivered</span></div>
+    <div><b data-n="100" data-s="%">0</b><span>Completion rate</span></div>
+  </div>
+</section>
+
+<section id="work"><div class="rule"><h2>Selected projects</h2><i></i><span>Featured work</span></div><div class="grid" id="grid"></div></section>
+
+<section id="about"><div class="band">
+  <div><h3>Education &amp; skills</h3>
+    <div class="sub" style="margin-top:0">Education</div>
+    <div class="ed"><div>Bachelor of Computer Science (Software Engineering)<small>Virtual University of Pakistan</small></div><em>In progress</em></div>
+    <div class="sub">Skills</div><div class="tools" id="tools"></div><div id="sk"></div></div>
+  <div class="pr"><h3>Work process</h3><div id="pr"></div></div>
+  <div class="q"><div><div class="m">"</div><p>Good design is not just how it looks, but how it works.</p><div class="sg">Talha</div></div><small>Let's create something great together.</small></div>
+</div></section>
+
+<section id="exp"><div class="rule"><h2>Experience</h2><i></i><span>Where I worked</span></div><div class="tl" id="tl"></div></section>
+
+<section id="contact"><div class="ct">
+  <div><h2>Let's work together</h2><p>I'm open to new projects and collaborations with clients worldwide. Delivered 20+ custom websites and full store builds, and ready for yours.</p><a class="btn" href="https://wa.me/923283600656" target="_blank" rel="noopener">Available for freelance</a></div>
+  <div id="rows"></div>
+</div></section>
+<footer>© 2026 Rao Talha Imam · Karachi, Pakistan</footer>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],root=document.documentElement;
+const PHOTO=""; /* apni photo ka link yahan daalo (transparent PNG best), khali chhodo to nahi dikhegi */
+const projects=[
+["Doctor Ibrahim","Shopify store","https://doctoribrahim.com",["#1f6f5c","#07130f"],"Complete store built from the ground up with custom Liquid sections and homepage.","shopify"],
+["Beauty Reinforcer","Custom Liquid theme","",["#9a4a6a","#1a0b13"],"Responsive, on-brand beauty storefront turned into pixel-perfect code.","liquid"],
+["Champions Gloves","E-commerce storefront","",["#8a6418","#1a1206"],"High-converting product pages, mobile layouts and secure checkout flows.","shopify"],
+["OTC CoreVirtual","Corporate web platform","",["#0e7490","#07182b"],"Frontend with advanced subdomain structure and marketing tracking.","gtm"],
+["WOK CoreVirtual","Elementor website","",["#5b4bb0","#0d0a24"],"High-performance responsive site with tracking pixel integrations.","elementor"],
+["Lux Beauty","Demo frontend","",["#a8813a","#1c1408"],"Fluid layouts, custom lazy loading and advanced speed tuning.","html"]];
+const jobs=[
+["Apr 2024 to Present","Freelance WordPress & Shopify Developer / Tracking Specialist","Self-employed, remote",[
+"Delivered full end-to-end Shopify store development for doctoribrahim.com, with custom Liquid sections, homepage build and storefront architecture from concept to launch.",
+"Built custom Liquid sections and theme customizations for e-commerce clients, including Beauty Reinforcer, turning design references into pixel-perfect storefronts.",
+"Build custom Shopify apps and integrate third-party and REST APIs to extend storefront features and automate client workflows.",
+"Design and deploy WordPress and Shopify sites with Elementor, reaching 9.1+ speed and performance optimization scores.",
+"Set up marketing tracking with Google Tag Manager, preserving fbclid, gclid and custom UTM parameters across third-party platforms.",
+"Architect custom frontend solutions and configure multi-level subdomains and hosting for international telehealth clients."]],
+["Feb 2022 to Apr 2024","Web Developer","Red Feather Tech",[
+"Designed, developed and deployed 20+ custom WordPress and Shopify websites for international clients, with a 100% project completion and satisfaction rate.",
+"Optimized Core Web Vitals, page speed and technical SEO structure, increasing organic search traffic and engagement.",
+"Gathered requirements directly from business clients and built end-to-end frontend solutions from Figma designs."]],
+["Ongoing","Digital Sales & Community Specialist","Freelance, Discord and Twitter",[
+"Ran data-driven digital sales and outreach, growing freelance revenue and winning high-value international clients.",
+"Built community infrastructure with automated sales bots and structured support ticket funnels."]]];
+const skills={"Languages & frameworks":["HTML5","CSS3","JavaScript ES6","Bootstrap","Tailwind","Liquid"],"CMS & platforms":["WordPress","Shopify","Elementor Pro","Theme customization"],"Design to code":["Figma to web","Pixel-perfect","Responsive","UI/UX"],"Marketing tech":["Google Tag Manager","UTM","fbclid","gclid","Pixels"],"Optimization & SEO":["Speed","Core Web Vitals","Technical SEO","Lazy loading"],"Apps & APIs":["Shopify apps","REST APIs","Integrations"],"Infrastructure":["Domains","Hosting","Subdomains"]};
+const I={s:'<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m20 20-4-4"/></svg>',b:'<svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10c1 1 1 2 1 3h6c0-1 0-2 1-3a6 6 0 0 0-4-10z"/></svg>',p:'<svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/></svg>',c:'<svg viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4"/></svg>',r:'<svg viewBox="0 0 24 24"><path d="M21 3 3 10l7 3 3 7z"/></svg>',
+m:'<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></svg>',t:'<svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>',l:'<svg viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',w:'<svg viewBox="0 0 24 24"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.2 18.8z"/></svg>'};
+const TOOLICON={
+ wp:['#3858e9','<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.4" fill="none" stroke="currentColor" stroke-width="1.4"/><path fill="currentColor" stroke="none" d="M3.5 12a8.5 8.5 0 0 0 5.1 7.8L4.9 9.3A8.4 8.4 0 0 0 3.5 12zm14.9-.4c0-1-.4-1.7-.7-2.3-.4-.7-.8-1.3-.8-2 0-.8.6-1.6 1.5-1.6h.1a8.5 8.5 0 0 0-12.9 1.6h.5c.9 0 2.3-.1 2.3-.1.5 0 .5.6.1.7 0 0-.5.1-1 .1l3.1 9.3 1.9-5.6-1.3-3.7c-.5 0-.9-.1-.9-.1-.5 0-.4-.7.1-.7 0 0 1.4.1 2.3.1.9 0 2.3-.1 2.3-.1.5 0 .5.6.1.7 0 0-.5.1-1 .1l3.1 9.2.9-2.9c.4-1.2.6-2.1.6-2.7zm-5.9 1.2-2.6 7.4c.8.2 1.6.4 2.5.4 1 0 2-.2 2.9-.5l-.1-.1-2.7-7.2zm7.7-5a6.4 6.4 0 0 1 .1 1.1c0 1.1-.2 2.3-.8 3.9l-3.2 9.2a8.5 8.5 0 0 0 3.9-11.2v-.1c.4-.9.6-1.9.6-2.9h-.6z"/></svg>'],
+ shopify:['#95bf47','<svg viewBox="0 0 24 24"><path fill="currentColor" d="M17 5.3c0-.2-.2-.3-.3-.3-.2 0-1.6-.1-1.6-.1s-1-1-1.2-1.1c-.2-.2-.5-.1-.6-.1l-.7.2c-.1-.4-.4-1-.7-1.4-.5-.7-1.2-1-2.1-1-.1 0-.2 0-.2.1-.3-.4-.6-.5-.9-.5-2.2 0-3.3 2.8-3.6 4.2-1 .3-1.6.5-1.7.5-.5.2-.5.2-.6.6L2.5 19.5 15.6 22 20.5 21z"/><path fill="#5a8a2c" d="M16.7 5c-.2 0-1.6-.1-1.6-.1s-1-1-1.2-1.1l-.1 18.2L20.5 21 17 5.3c0-.2-.2-.3-.3-.3z"/><path fill="#fff" d="m11.3 8.9-.6 2.3s-.7-.3-1.5-.3c-1.2 0-1.3.8-1.3.9 0 .9 2.5 1.3 2.5 3.6 0 1.8-1.1 2.9-2.7 2.9-1.9 0-2.8-1.2-2.8-1.2l.5-1.7s1 .8 1.8.8c.5 0 .8-.4.8-.7 0-1.2-2.1-1.3-2.1-3.4 0-1.7 1.2-3.4 3.7-3.4.9 0 1.4.3 1.7.2z"/></svg>'],
+ elementor:['#92003b','<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.4" fill="currentColor"/><rect x="6.4" y="6.4" width="3" height="11.2" fill="#fff"/><rect x="11.3" y="6.4" width="6.3" height="3" fill="#fff"/><rect x="11.3" y="10.5" width="6.3" height="3" fill="#fff"/><rect x="11.3" y="14.6" width="6.3" height="3" fill="#fff"/></svg>'],
+ liquid:['#5bcefa','<svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5C9 7 6 10.6 6 14.2a6 6 0 0 0 12 0C18 10.6 15 7 12 2.5z"/><path fill="rgba(255,255,255,.55)" d="M9.2 14a2.8 2.8 0 0 0 2.8 2.8c.4 0 .4.7 0 .7a3.5 3.5 0 0 1-3.5-3.5c0-.4.7-.4.7 0z"/></svg>'],
+ html:['#e34c26','<svg viewBox="0 0 24 24"><path fill="currentColor" d="m3.5 2 1.6 18L12 22l6.9-2L20.5 2z"/><path fill="rgba(0,0,0,.15)" d="M12 3.6V20.3l5.6-1.6 1.3-14.7H12z"/><path fill="#fff" d="M12 8.2H8.3l.2 2.3H12v2.3H8.7l.3 3.1L12 16.7v-2.4l-1.7-.5-.1-1.3H12zm0-3.4H6.6l.6 6.9H12V9.4H8.9l-.2-1.9H12z"/></svg>'],
+ gtm:['#4285f4','<svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 4 8v8l8 6 8-6V8z"/><circle cx="12" cy="12" r="3.4" fill="#fff"/></svg>'],
+ wa:['#25d366','<svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2z"/><path fill="#fff" d="M16.4 13.6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-1.9-1.2 7.3 7.3 0 0 1-1.3-1.7c-.1-.2 0-.4.1-.5l.4-.5.3-.5v-.4l-.8-1.9c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3a2.8 2.8 0 0 0-.9 2.1c0 1.2.9 2.4 1 2.6.1.2 1.7 2.7 4.2 3.8 1.5.6 2 .7 2.7.6.4-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z"/></svg>']
+};
+const TOOLS=[["wp","WordPress"],["shopify","Shopify"],["elementor","Elementor"],["liquid","Liquid"],["html","HTML/CSS/JS"],["gtm","GTM"]];
+
+const steps=[["Discover","Gathering requirements directly from your business and goals.",I.s],["Ideate","Planning structure and turning Figma or brand references into a concept.",I.b],["Design","Pixel-perfect, mobile-first layouts with a clear focus on conversion.",I.p],["Develop","Custom Liquid, Elementor and WordPress builds with clean code.",I.c],["Deliver","Speed tuning, Core Web Vitals, tracking setup and launch.",I.r]];
+
+if(PHOTO)$('.hero').insertAdjacentHTML('afterbegin',`<img class="ph" src="${PHOTO}" alt="Rao Talha Imam">`);
+$('#name').innerHTML=["RAO TALHA","IMAM"].map(l=>'<div>'+[...l].map(c=>c===' '?' ':'<span aria-hidden="true">'+c+'</span>').join('')+'</div>').join('');
+$('#grid').innerHTML=projects.map((p,i)=>{const tk=p[5],ti=TOOLICON[tk];return `<div class="pc"><div class="shot" style="background:linear-gradient(145deg,${p[3][0]},${p[3][1]})">${ti?`<span class="badge" style="color:${ti[0]}">${ti[1]}</span>`:''}<div class="d"><i></i><i></i><i></i></div><div class="l"><i style="width:55%"></i><i style="width:35%"></i></div><h4>${p[0]}</h4></div><div class="meta"><b>${String(i+1).padStart(2,'0')}</b><div>${p[0]}<small>${p[1]}</small></div>${p[2]?`<a href="${p[2]}" target="_blank" rel="noopener" aria-label="Visit ${p[0]}">↗</a>`:''}</div><p>${p[4]}</p></div>`}).join('');
+$('#tools').innerHTML=TOOLS.map(([k,label])=>{const ti=TOOLICON[k];return `<div class="tool"><i style="color:${ti[0]}">${ti[1]}</i><span>${label}</span></div>`}).join('');
+$('#sk').innerHTML=Object.entries(skills).map(([k,v])=>`<div class="gl">${k}</div><div class="chips">${v.map(x=>`<span>${x}</span>`).join('')}</div>`).join('');
+$('#pr').innerHTML=steps.map(s=>`<div class="step"><i>${s[2]}</i><div><b>${s[0]}</b><p>${s[1]}</p></div></div>`).join('');
+$('#tl').innerHTML=jobs.map(j=>`<div class="job"><small>${j[0]}</small><h3>${j[1]}</h3><em>${j[2]}</em><ul>${j[3].map(b=>`<li>${b}</li>`).join('')}</ul></div>`).join('');
+$('#rows').innerHTML=[[I.m,"talhashahid13301@gmail.com","mailto:talhashahid13301@gmail.com",""],[I.t,"+92 328 3600656","tel:+923283600656",""],[TOOLICON.wa[1],"WhatsApp chat","https://wa.me/923283600656",TOOLICON.wa[0]],[I.l,"Karachi, Pakistan","",""]].map(r=>`<a class="row" ${r[2]?`href="${r[2]}"`:''}><i style="${r[3]?`color:${r[3]};border-color:${r[3]}`:''}">${r[0]}</i>${r[1]}</a>`).join('');
+
+const L=$$('#name span');let cx=0,cy=0,tx=0,ty=0;
+addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY;root.style.setProperty('--x',tx+'px');root.style.setProperty('--y',ty+'px');
+ L.forEach(s=>{const r=s.getBoundingClientRect(),d=Math.hypot(tx-(r.left+r.width/2),ty-(r.top+r.height/2)),p=Math.max(0,1-d/220);
+  s.style.transform=`translateY(${-p*18}px) scale(${1+p*.1})`;s.style.color=`rgb(${239-p*34},${232-p*49},${214-p*83})`})});
+(function f(){cx+=(tx-cx)*.18;cy+=(ty-cy)*.18;$('#cur').style.transform=`translate(${cx}px,${cy}px)`;requestAnimationFrame(f)})();
+const W=["WordPress expert","Shopify builder","Liquid engineer","Tracking specialist"];let wi=0,ci=0,del=0;
+(function t(){const w=W[wi];ci+=del?-1:1;$('#typed').textContent=w.slice(0,ci);let d=del?35:70;
+ if(!del&&ci===w.length){del=1;d=1400}else if(del&&ci===0){del=0;wi=(wi+1)%W.length;d=300}setTimeout(t,d)})();
+const io=new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.unobserve(e.target);const b=e.target,n=+b.dataset.n,t0=performance.now();
+ (function u(t){const p=Math.min(1,(t-t0)/1400);b.textContent=Math.round(n*(1-Math.pow(1-p,3)))+b.dataset.s;if(p<1)requestAnimationFrame(u)})(t0)}),{threshold:.6});
+$$('[data-n]').forEach(b=>io.observe(b));
+$$('.pc').forEach(c=>{const s=c.querySelector('.shot');c.onmousemove=e=>{const r=s.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+ s.style.transform=`perspective(900px) rotateY(${(x-.5)*12}deg) rotateX(${(.5-y)*12}deg)`;s.style.setProperty('--mx',x*100+'%');s.style.setProperty('--my',y*100+'%')};c.onmouseleave=()=>s.style.transform=''});
+$$('a,.pc,.step').forEach(e=>{e.onmouseenter=()=>$('#cur').classList.add('big');e.onmouseleave=()=>$('#cur').classList.remove('big')});
+addEventListener('scroll',()=>{$('#prog').style.transform=`scaleX(${root.scrollTop/(root.scrollHeight-innerHeight)})`;
+ const r=$('#tl').getBoundingClientRect();$('#tl').style.setProperty('--p',Math.min(1,Math.max(0,(innerHeight*.7-r.top)/r.height)))},{passive:true});
+</script></body></html>
